@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gym | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-logo">
+            <a href="#home"><img src="img/logo.png" alt="GymLife"></a>
+        </div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#bmi">BMI</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="canvas-social">
+            <a href="#" class="canvas-instagram-link">
+                <i class="fa fa-instagram"></i>
+                <span>@gymlife_official</span>
+            </a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a href="#home">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li class="active"><a href="#home">Home</a></li>
+                            <li><a href="#classes">Classes</a></li>
+                            <li><a href="#plans">Plans</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#bmi">BMI</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        <div class="to-social">
+                            <a href="#" style="display: inline-flex; align-items: center; text-decoration: none;">
+                                <i class="fa fa-instagram"></i>
+                                <span style="color: #fff; margin-left: 5px; font-size: 14px; text-transform: lowercase;">@gymlife_official</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero-section" id="home">
+        <div class="video-hero-container">
+            <video id="hero-video" autoplay muted playsinline class="hero-video-bg">
+                <source src="img/videoplayback.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-6">
+                        <div class="hi-text">
+                            <span>Fuel Your Ambition</span>
+                            <h1>Redefine Your <strong>Limits</strong></h1>
+                            <p class="text-white mb-4" style="font-size: 18px; max-width: 500px; line-height: 1.6;">Experience world-class coaching, premium equipment, and a supportive community designed to help you crush your goals.</p>
+                            <a href="#" class="primary-btn" style="color: #000;">Start Your Transformation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var video = document.getElementById('hero-video');
+                var startSkip = 6;
+                var endSkip = 16;
+
+                if(video) {
+                    var setStart = function() {
+                        video.currentTime = startSkip;
+                    };
+                    
+                    if (video.readyState >= 1) {
+                        setStart();
+                    } else {
+                        video.addEventListener('loadedmetadata', setStart);
+                    }
+                    
+                    video.addEventListener('timeupdate', function() {
+                        if (this.duration && this.currentTime > (this.duration - endSkip)) {
+                            this.currentTime = startSkip;
+                            this.play();
+                        }
+                    });
+                }
+            });
+        </script>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- ChoseUs Section Begin -->
+    <section class="choseus-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Why chose us?</span>
+                        <h2>PUSH YOUR LIMITS FORWARD</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-034-stationary-bike"></span>
+                        <h4>Modern equipment</h4>
+                        <p>Train with top-tier machines designed for precision, safety, and maximum results in every workout session.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-033-juice"></span>
+                        <h4>Healthy nutrition plan</h4>
+                        <p>Fuel your body right with customized meal guides that complement your training and accelerate your progress.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-002-dumbell"></span>
+                        <h4>Professional training plan</h4>
+                        <p>Follow expert-designed programs tailored to your fitness level, ensuring steady growth and peak performance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-014-heart-beat"></span>
+                        <h4>Unique to your needs</h4>
+                        <p>Experience a personalized approach where every exercise and plan is adapted to your specific goals and lifestyle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ChoseUs Section End -->
+
+    <!-- Classes Section Begin -->
+    <section class="classes-section spad" id="classes">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Our Classes</span>
+                        <h2>WHAT WE CAN OFFER</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="class-item">
+                        <div class="ci-pic">
+                            <img src="img/classes/class-1.jpg" alt="">
+                        </div>
+                        <div class="ci-text">
+                            <span>STRENGTH</span>
+                            <h5>Weightlifting</h5>
+                            <a href="#"><i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="class-item">
+                        <div class="ci-pic">
+                            <img src="img/classes/class-2.jpg" alt="">
+                        </div>
+                        <div class="ci-text">
+                            <span>Cardio</span>
+                            <h5>Indoor cycling</h5>
+                            <a href="#"><i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="class-item">
+                        <div class="ci-pic">
+                            <img src="img/classes/class-3.jpg" alt="">
+                        </div>
+                        <div class="ci-text">
+                            <span>STRENGTH</span>
+                            <h5>Kettlebell power</h5>
+                            <a href="#"><i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="class-item">
+                        <div class="ci-pic">
+                            <img src="img/classes/class-4.jpg" alt="">
+                        </div>
+                        <div class="ci-text">
+                            <span>Cardio</span>
+                            <h4>Indoor cycling</h4>
+                            <a href="#"><i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="class-item">
+                        <div class="ci-pic">
+                            <img src="img/classes/class-5.jpg" alt="">
+                        </div>
+                        <div class="ci-text">
+                            <span>Training</span>
+                            <h4>Boxing</h4>
+                            <a href="#"><i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ChoseUs Section End -->
+
+    <!-- Banner Section Begin -->
+    <section class="banner-section set-bg" data-setbg="img/banner-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="bs-text">
+                        <h2>Join now to get more deals</h2>
+                        <div class="bt-tips">Where health, beauty, and fitness meet.</div>
+                        <a href="#" class="primary-btn  btn-normal">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section End -->
+
+    <!-- Pricing Section Begin -->
+    <section class="bento-section spad" id="plans">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Our Plan</span>
+                        <h2>Choose your training plan</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="bento-grid">
+                <div class="bento-card bento-card--big">
+                    <div class="bento-card-icon"><i class="fa fa-quote-left"></i></div>
+                    <h3>Personalized Coaching</h3>
+                    <p>Programs built around your goals with weekly check-ins, progress tracking, and expert guidance.</p>
+                    <div class="bento-card-meta">
+                        <span class="bento-tag">Strength</span>
+                        <span class="bento-tag">Performance</span>
+                        <span class="bento-tag">Mobility</span>
+                    </div>
+
+                    
+                    <div class="bento-testimonials">
+                        <br>
+                         <h3>Testimonials</h3>
+                         <br>
+                         <div class="bento-testimonials-track">
+                            <div class="bento-testimonial-item">
+                                <p>“I dropped 6 kg in 8 weeks. The check-ins kept me accountable and consistent.”</p>
+                                <span class="bento-author">Priya S • Member</span>
+                            </div>
+                            <div class="bento-testimonial-item">
+                                <p>“Stronger lifts in four weeks. The plan feels personal and realistic.”</p>
+                                <span class="bento-author">Rahul K • Member</span>
+                            </div>
+                            <div class="bento-testimonial-item">
+                                <p>“Energy levels are up and my routine finally sticks.”</p>
+                                <span class="bento-author">Ananya R • Member</span>
+                            </div>
+                            <div class="bento-testimonial-item">
+                                <p>“I dropped 6 kg in 8 weeks. The check-ins kept me accountable and consistent.”</p>
+                                <span class="bento-author">Priya S • Member</span>
+                            </div>
+                            <div class="bento-testimonial-item">
+                                <p>“Stronger lifts in four weeks. The plan feels personal and realistic.”</p>
+                                <span class="bento-author">Rahul K • Member</span>
+                            </div>
+                            <div class="bento-testimonial-item">
+                                <p>“Energy levels are up and my routine finally sticks.”</p>
+                                <span class="bento-author">Ananya R • Member</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-card bento-card--s1">
+                    <div class="bento-card-icon"><i class="fa fa-bolt"></i></div>
+                    <h4>Open Gym</h4>
+                    <p>Unlimited access to all training zones and equipment.</p>
+                </div>
+                <div class="bento-card bento-card--s2">
+                    <div class="bento-card-icon"><i class="fa fa-users"></i></div>
+                    <h4>Group Classes</h4>
+                    <p>HIIT, boxing, and conditioning sessions daily.</p>
+                </div>
+                <div class="bento-card bento-card--s3">
+                    <div class="bento-card-icon"><i class="fa fa-heartbeat"></i></div>
+                    <h4>Recovery</h4>
+                    <p>Mobility, stretching, and guided recovery protocols.</p>
+                </div>
+                <div class="bento-card bento-card--s4">
+                    <div class="bento-card-icon"><i class="fa fa-cutlery"></i></div>
+                    <h4>Nutrition</h4>
+                    <p>Meal guidance and habit coaching for results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section End -->
+
+    <!-- Gallery Section Begin -->
+    <div class="gallery-section" id="gallery">
+        <div class="gallery">
+            <div class="grid-sizer"></div>
+            <div class="gs-item grid-wide set-bg" data-setbg="img/gallery/gallery-1.jpg">
+                <a href="img/gallery/gallery-1.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            </div>
+            <div class="gs-item set-bg" data-setbg="img/gallery/gallery-2.jpg">
+                <a href="img/gallery/gallery-2.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            </div>
+            <div class="gs-item set-bg" data-setbg="img/gallery/gallery-3.jpg">
+                <a href="img/gallery/gallery-3.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            </div>
+            <div class="gs-item set-bg" data-setbg="img/gallery/gallery-4.jpg">
+                <a href="img/gallery/gallery-4.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            </div>
+            <div class="gs-item set-bg" data-setbg="img/gallery/gallery-5.jpg">
+                <a href="img/gallery/gallery-5.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            </div>
+            <div class="gs-item grid-wide set-bg" data-setbg="img/gallery/gallery-6.jpg">
+                <a href="img/gallery/gallery-6.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Section End -->
+
+    <!-- Class Timetable Section Begin -->
+    <section class="class-timetable-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title">
+                        <span>Find Your Time</span>
+                        <h2>Class Schedule</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="table-controls d-none d-lg-block">
+                        <ul>
+                            <li class="active" data-tsfilter="all">All</li>
+                            <li data-tsfilter="fitness">Fitness</li>
+                            <li data-tsfilter="motivation">Motivation</li>
+                            <li data-tsfilter="workout">Workout</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desktop Schedule (Grid) -->
+            <div class="schedule-grid d-none d-lg-grid">
+                <!-- Monday -->
+                <div class="schedule-card" data-tsmeta="workout">
+                    <div class="sc-time">Mon 6:00am - 8:00am</div>
+                    <div class="sc-content">
+                        <h5>WEIGHT LOSS</h5>
+                        <span>RLefew D. Loee</span>
+                        <div class="sc-tag">Workout</div>
+                    </div>
+                </div>
+                <div class="schedule-card" data-tsmeta="fitness">
+                    <div class="sc-time">Mon 10:00am - 12:00am</div>
+                    <div class="sc-content">
+                        <h5>Cardio</h5>
+                        <span>RLefew D. Loee</span>
+                        <div class="sc-tag">Fitness</div>
+                    </div>
+                </div>
+                 <div class="schedule-card" data-tsmeta="workout">
+                    <div class="sc-time">Mon 5:00pm - 7:00pm</div>
+                    <div class="sc-content">
+                        <h5>Yoga</h5>
+                        <span>Keaf Shen</span>
+                        <div class="sc-tag">Workout</div>
+                    </div>
+                </div>
+
+                <!-- Tuesday -->
+                 <div class="schedule-card" data-tsmeta="fitness">
+                    <div class="sc-time">Tue 6:00am - 8:00am</div>
+                    <div class="sc-content">
+                        <h5>Fitness</h5>
+                        <span>Kimberly Stone</span>
+                        <div class="sc-tag">Fitness</div>
+                    </div>
+                </div>
+                <div class="schedule-card" data-tsmeta="motivation">
+                    <div class="sc-time">Tue 10:00am - 12:00am</div>
+                    <div class="sc-content">
+                        <h5>Boxing</h5>
+                        <span>Rachel Adam</span>
+                        <div class="sc-tag">Motivation</div>
+                    </div>
+                </div>
+
+                <!-- Wednesday -->
+                 <div class="schedule-card" data-tsmeta="workout">
+                    <div class="sc-time">Wed 6:00am - 8:00am</div>
+                    <div class="sc-content">
+                        <h5>Body Building</h5>
+                        <span>Robert Cage</span>
+                        <div class="sc-tag">Workout</div>
+                    </div>
+                </div>
+                 <div class="schedule-card" data-tsmeta="fitness">
+                    <div class="sc-time">Wed 10:00am - 12:00am</div>
+                    <div class="sc-content">
+                        <h5>Cardio</h5>
+                        <span>RLefew D. Loee</span>
+                        <div class="sc-tag">Fitness</div>
+                    </div>
+                </div>
+                
+                 <!-- Thursday -->
+                 <div class="schedule-card" data-tsmeta="motivation">
+                    <div class="sc-time">Thu 6:00am - 8:00am</div>
+                    <div class="sc-content">
+                        <h5>Karate</h5>
+                        <span>Donald Grey</span>
+                        <div class="sc-tag">Motivation</div>
+                    </div>
+                </div>
+                 <div class="schedule-card" data-tsmeta="workout">
+                    <div class="sc-time">Thu 5:00pm - 7:00pm</div>
+                    <div class="sc-content">
+                        <h5>Yoga</h5>
+                        <span>Keaf Shen</span>
+                        <div class="sc-tag">Workout</div>
+                    </div>
+                </div>
+                
+                 <!-- Friday -->
+                 <div class="schedule-card" data-tsmeta="fitness">
+                    <div class="sc-time">Fri 6:00am - 8:00am</div>
+                    <div class="sc-content">
+                        <h5>Crossfit</h5>
+                        <span>Kimberly Stone</span>
+                        <div class="sc-tag">Fitness</div>
+                    </div>
+                </div>
+                 <div class="schedule-card" data-tsmeta="workout">
+                    <div class="sc-time">Fri 10:00am - 12:00am</div>
+                    <div class="sc-content">
+                        <h5>Body Building</h5>
+                        <span>Robert Cage</span>
+                        <div class="sc-tag">Workout</div>
+                    </div>
+                </div>
+
+                 <!-- Saturday -->
+                 <div class="schedule-card" data-tsmeta="motivation">
+                    <div class="sc-time">Sat 6:00am - 8:00am</div>
+                    <div class="sc-content">
+                        <h5>Boxing</h5>
+                        <span>Rachel Adam</span>
+                        <div class="sc-tag">Motivation</div>
+                    </div>
+                </div>
+                 <div class="schedule-card" data-tsmeta="fitness">
+                    <div class="sc-time">Sat 10:00am - 12:00am</div>
+                    <div class="sc-content">
+                        <h5>Cardio</h5>
+                        <span>RLefew D. Loee</span>
+                        <div class="sc-tag">Fitness</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile/Tablet Schedule (Carousel) -->
+            <div class="schedule-mobile-carousel owl-carousel d-lg-none">
+                <!-- Monday -->
+                <div class="schedule-card" data-tsmeta="workout">
+                    <div class="sc-time">Mon 6:00am - 8:00am</div>
+                    <div class="sc-content">
+                        <h5>WEIGHT LOSS</h5>
+                        <span>RLefew D. Loee</span>
+                        <div class="sc-tag">Workout</div>
+                    </div>
+                </div>
+                <div class="schedule-card" data-tsmeta="fitness">
+                    <div class="sc-time">Mon 10:00am - 12:00am</div>
+                    <div class="sc-content">
+                        <h5>Cardio</h5>
+                        <span>RLefew D. Loee</span>
+                        <div class="sc-tag">Fitness</div>
+                    </div>
+                </div>
+                 <div class="schedule-card" data-tsmeta="workout">
+                    <div class="sc-time">Mon 5:00pm - 7:00pm</div>
+                    <div class="sc-content">
+                        <h5>Yoga</h5>
+                        <span>Keaf Shen</span>
+                        <div class="sc-tag">Workout</div>
+                    </div>
+                </div>
+
+                <!-- Tuesday -->
+                 <div class="schedule-card" data-tsmeta="fitness">
+                    <div class="sc-time">Tue 6:00am - 8:00am</div>
+                    <div class="sc-content">
+                        <h5>Fitness</h5>
+                        <span>Kimberly Stone</span>
+                        <div class="sc-tag">Fitness</div>
+                    </div>
+                </div>
+                <div class="schedule-card" data-tsmeta="motivation">
+                    <div class="sc-time">Tue 10:00am - 12:00am</div>
+                    <div class="sc-content">
+                        <h5>Boxing</h5>
+                        <span>Rachel Adam</span>
+                        <div class="sc-tag">Motivation</div>
+                    </div>
+                </div>
+
+                <!-- Wednesday -->
+                 <div class="schedule-card" data-tsmeta="workout">
+                    <div class="sc-time">Wed 6:00am - 8:00am</div>
+                    <div class="sc-content">
+                        <h5>Body Building</h5>
+                        <span>Robert Cage</span>
+                        <div class="sc-tag">Workout</div>
+                    </div>
+                </div>
+                 <div class="schedule-card" data-tsmeta="fitness">
+                    <div class="sc-time">Wed 10:00am - 12:00am</div>
+                    <div class="sc-content">
+                        <h5>Cardio</h5>
+                        <span>RLefew D. Loee</span>
+                        <div class="sc-tag">Fitness</div>
+                    </div>
+                </div>
+                
+                 <!-- Thursday -->
+                 <div class="schedule-card" data-tsmeta="motivation">
+                    <div class="sc-time">Thu 6:00am - 8:00am</div>
+                    <div class="sc-content">
+                        <h5>Karate</h5>
+                        <span>Donald Grey</span>
+                        <div class="sc-tag">Motivation</div>
+                    </div>
+                </div>
+                 <div class="schedule-card" data-tsmeta="workout">
+                    <div class="sc-time">Thu 5:00pm - 7:00pm</div>
+                    <div class="sc-content">
+                        <h5>Yoga</h5>
+                        <span>Keaf Shen</span>
+                        <div class="sc-tag">Workout</div>
+                    </div>
+                </div>
+                
+                 <!-- Friday -->
+                 <div class="schedule-card" data-tsmeta="fitness">
+                    <div class="sc-time">Fri 6:00am - 8:00am</div>
+                    <div class="sc-content">
+                        <h5>Crossfit</h5>
+                        <span>Kimberly Stone</span>
+                        <div class="sc-tag">Fitness</div>
+                    </div>
+                </div>
+                 <div class="schedule-card" data-tsmeta="workout">
+                    <div class="sc-time">Fri 10:00am - 12:00am</div>
+                    <div class="sc-content">
+                        <h5>Body Building</h5>
+                        <span>Robert Cage</span>
+                        <div class="sc-tag">Workout</div>
+                    </div>
+                </div>
+
+                 <!-- Saturday -->
+                 <div class="schedule-card" data-tsmeta="motivation">
+                    <div class="sc-time">Sat 6:00am - 8:00am</div>
+                    <div class="sc-content">
+                        <h5>Boxing</h5>
+                        <span>Rachel Adam</span>
+                        <div class="sc-tag">Motivation</div>
+                    </div>
+                </div>
+                 <div class="schedule-card" data-tsmeta="fitness">
+                    <div class="sc-time">Sat 10:00am - 12:00am</div>
+                    <div class="sc-content">
+                        <h5>Cardio</h5>
+                        <span>RLefew D. Loee</span>
+                        <div class="sc-tag">Fitness</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Class Timetable Section End -->
+
+    <!-- Footer Section Begin -->
+    <section class="footer-section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="fs-about">
+                        <div class="fa-logo">
+                            <a href="#"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p>Experience the ultimate fitness journey with our state-of-the-art facilities, expert trainers, and a supportive community dedicated to helping you achieve your goals.</p>
+                        <div class="fa-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-envelope-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="fs-widget">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#classes">Classes</a></li>
+                            <li><a href="#plans">Plans</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#bmi">BMI Calculator</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="fs-widget">
+                        <h4>Contact Us</h4>
+                        <div class="gt-text">
+                            <p><i class="fa fa-map-marker"></i> 333 Middle Winchendon Rd,<br/> Rindge, NH 03461</p>
+                            <p><i class="fa fa-mobile"></i> 125-711-811</p>
+                            <p><i class="fa fa-envelope"></i> Support.gymcenter@gmail.com</p>
+                        </div>
+                        <div class="footer-hours">
+                            <h4>Working Hours</h4>
+                            <ul>
+                                <li><span>Mon – Fri:</span> 6:00 AM – 10:00 PM</li>
+                                <li><span>Saturday:</span> 7:00 AM – 8:00 PM</li>
+                                <li><span>Sunday:</span> 8:00 AM – 6:00 PM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="fs-widget footer-map-widget">
+                        <h4>Location</h4>
+                        <div class="footer-map-embed">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.519202665839!2d77.55495379999999!3d12.938593899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f0052637671%3A0xeadeb781ae86e9a2!2sZeno%20Fitness%20Studio!5e0!3m2!1sen!2sus!4v1771694333426!5m2!1sen!2sus" width="100%" height="250" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.barfiller.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>
