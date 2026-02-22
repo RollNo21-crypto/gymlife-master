@@ -38,6 +38,12 @@
         $(".offcanvas-menu-overlay").removeClass("active");
     });
 
+    // Close mobile menu when a nav link is clicked (event delegation for slicknav)
+    $(".offcanvas-menu-wrapper").on('click', 'a', function () {
+        $(".offcanvas-menu-wrapper").removeClass("show-offcanvas-menu-wrapper");
+        $(".offcanvas-menu-overlay").removeClass("active");
+    });
+
     // Search model
     $('.search-switch').on('click', function () {
         $('.search-model').fadeIn(400);
@@ -57,13 +63,13 @@
     });
 
     /*------------------
-		Navigation
-	--------------------*/
+        Navigation
+    --------------------*/
     $(".mobile-menu").slicknav({
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
     });
-    
+
     /*------------------
         Header Scrolled
     --------------------*/
