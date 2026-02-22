@@ -1,4 +1,4 @@
-/******************************************************************
+﻿/******************************************************************
   Template Name: Gym
   Description:  Gym Fitness HTML Template
   Author: Colorlib
@@ -31,6 +31,16 @@
 
 /* Template default CSS
 /*----------------------------------------*/
+
+:root {
+	--gold-dark: #8B6914;
+	--gold-main: #C9A646;
+	--gold-mid: #D4B24F;
+	--gold-shine: #E8D57E;
+	--gold-light: #F4E08A;
+	--gold-gradient: linear-gradient(135deg, #8B6914 0%, #C9A646 25%, #F4E08A 50%, #C9A646 75%, #8B6914 100%);
+	--gold-gradient-subtle: linear-gradient(135deg, #8B6914, #C9A646, #D4B24F, #E8D57E, #D4B24F, #C9A646, #8B6914);
+}
 
 html,
 body {
@@ -122,7 +132,10 @@ ol {
 
 .section-title span {
 	font-size: 16px;
-	color: #f1a923;
+	background: var(--gold-gradient-subtle);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 	text-transform: uppercase;
 	font-weight: 700;
 }
@@ -170,12 +183,14 @@ ol {
 	display: inline-block;
 	font-size: 14px;
 	padding: 17px 30px 16px;
-	color: #ffffff;
-	background: #f1a923;
+	color: #000000;
+	background: var(--gold-gradient-subtle);
 	line-height: normal;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-weight: 700;
+	border: none;
+	transition: all 0.3s;
 }
 
 .primary-btn.btn-normal {
@@ -185,8 +200,8 @@ ol {
 }
 
 .primary-btn.btn-normal:hover {
-	background: #f1a923;
-	border-color: #f1a923;
+	background: var(--gold-gradient);
+	box-shadow: 0 4px 15px rgba(201, 166, 70, 0.4);
 }
 
 /* Preloder */
@@ -430,7 +445,7 @@ ol {
 }
 
 .nav-menu ul li.active>a {
-	color: #f1a923;
+	color: var(--gold-main);
 }
 
 .nav-menu ul li.active>a:after {
@@ -438,7 +453,7 @@ ol {
 }
 
 .nav-menu ul li:hover>a {
-	color: #f1a923;
+	color: var(--gold-main);
 }
 
 .nav-menu ul li:hover>a:after {
@@ -471,7 +486,7 @@ ol {
 	top: 22px;
 	height: 1px;
 	width: 100%;
-	background: #f1a923;
+	background: var(--gold-main);
 	content: "";
 	-webkit-transform: rotate(-20deg);
 	-ms-transform: rotate(-20deg);
@@ -525,11 +540,11 @@ ol {
 }
 
 .top-option .to-social a:hover {
-	color: #f1a923;
+	color: var(--gold-main);
 }
 
 .top-option .to-social a:hover span {
-	color: #f1a923 !important;
+	color: var(--gold-main) !important;
 }
 
 .offcanvas-menu-wrapper {
@@ -605,7 +620,10 @@ ol {
 }
 
 .video-hero-container .hi-text h1 strong {
-	color: #f1a923;
+	background: var(--gold-gradient);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .hs-slider.owl-carousel .owl-item.active .hs-item .hi-text span {
@@ -692,7 +710,10 @@ ol {
 }
 
 .hs-slider .hs-item .hi-text h1 strong {
-	color: #f1a923;
+	background: var(--gold-gradient);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .hs-slider .hs-item .hi-text .primary-btn {
@@ -716,7 +737,7 @@ ol {
 }
 
 .cs-item:hover span {
-	background: #f1a923;
+	background: var(--gold-main);
 	color: #ffffff;
 }
 
@@ -726,7 +747,7 @@ ol {
 	background: rgba(255, 255, 255, 0.1);
 	border-radius: 50%;
 	display: inline-block;
-	color: #f1a923;
+	color: var(--gold-main);
 	line-height: 90px;
 	text-align: center;
 	-webkit-transition: all 0.3s;
@@ -787,7 +808,7 @@ ol {
 }
 
 .class-item .ci-text span {
-	color: #f1a923;
+	color: var(--gold-main);
 	font-size: 12px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -862,14 +883,14 @@ ol {
 
 .bs-text .primary-btn {
 	background: transparent;
-	border: 2px solid #f1a923;
+	border: 2px solid var(--gold-main);
 }
 
 .bs-text .play-btn {
 	display: inline-block;
 	height: 70px;
 	width: 70px;
-	background: #f1a923;
+	background: var(--gold-main);
 	border-radius: 50%;
 	line-height: 70px;
 	text-align: center;
@@ -901,28 +922,31 @@ ol {
 
 .bento-card {
 	background: #0f0f0f;
-	border: 1px solid #1f1f1f;
-	border-radius: 16px;
+	border: 1px solid #2a2a2a;
+	border-radius: 4px;
 	padding: 28px;
 	color: #ffffff;
 	min-height: 180px;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
 	min-width: 0;
-	/* Prevents grid blowout from wide content */
 	overflow: hidden;
-	/* Ensures content stays inside */
+	position: relative;
 }
 
 .bento-card:hover {
-	border-color: #f1a923;
+	border-color: var(--gold-main);
+	box-shadow: 0 0 20px rgba(201, 166, 70, 0.15);
+	transform: translateY(-2px);
 }
 
 .bento-card--big {
 	grid-area: big;
-	background: #f1a923;
+	background: var(--gold-gradient-subtle);
 	padding: 36px;
+	border: none;
+	border-radius: 4px;
 }
 
 .bento-card--s1 {
@@ -946,16 +970,10 @@ ol {
 .bento-card--s3,
 .bento-card--s4 {
 	aspect-ratio: 1 / 1;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
+	border-radius: 4px;
 }
 
 .bento-card h3 {
@@ -981,17 +999,11 @@ ol {
 .bento-card-icon {
 	width: 48px;
 	height: 48px;
-	border-radius: 12px;
-	background: #f1a923;
-	color: #111111;
-	display: -webkit-box;
-	display: -ms-flexbox;
+	border-radius: 4px;
+	background: var(--gold-gradient-subtle);
+	color: var(--gold-dark);
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 	font-size: 20px;
 	margin-bottom: 16px;
@@ -999,7 +1011,7 @@ ol {
 
 .bento-card--big .bento-card-icon {
 	background: #ffffff;
-	color: #f1a923;
+	color: var(--gold-main);
 }
 
 .bento-card--big h3,
@@ -1021,10 +1033,10 @@ ol {
 	font-size: 12px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	color: #111111;
+	color: var(--gold-dark);
 	padding: 6px 12px;
-	border: 1px solid #111111;
-	border-radius: 999px;
+	border: 1px solid var(--gold-dark);
+	border-radius: 2px;
 }
 
 .bento-plans {
@@ -1043,7 +1055,7 @@ ol {
 
 .bento-plan {
 	background: #111111;
-	color: #f1a923;
+	color: var(--gold-main);
 	border-radius: 999px;
 	padding: 8px 16px;
 	font-size: 12px;
@@ -1069,7 +1081,7 @@ ol {
 .bento-testimonial-item {
 	background: #ffffff;
 	padding: 16px;
-	border-radius: 12px;
+	border-radius: 4px;
 	width: 260px;
 	flex-shrink: 0;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -1136,7 +1148,7 @@ ol {
 
 .gallery .gs-item .thumb-icon {
 	font-size: 48px;
-	color: #f1a923;
+	color: var(--gold-main);
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1228,7 +1240,7 @@ ol {
 }
 
 .ts-slider.owl-carousel .owl-dots button.active {
-	background: #f1a923;
+	background: var(--gold-main);
 }
 
 .ts-slider.owl-carousel .owl-dots button:last-child {
@@ -1302,7 +1314,7 @@ ol {
 	display: inline-block;
 	height: 40px;
 	width: 40px;
-	background: #f1a923;
+	background: var(--gold-main);
 	border-radius: 50%;
 	line-height: 40px;
 	text-align: center;
@@ -1352,6 +1364,127 @@ ol {
 }
 
 /*---------------------
+  BMI Calculator
+-----------------------*/
+
+.bmi-section {
+	background: #0a0a0a;
+}
+
+.bmi-calculator {
+	background: #151515;
+	padding: 40px;
+	border-radius: 8px;
+	border: 1px solid #222;
+}
+
+.bmi-form label {
+	color: #fff;
+	font-family: "Oswald", sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+	display: block;
+}
+
+.bmi-form input {
+	width: 100%;
+	padding: 14px 16px;
+	background: #0a0a0a;
+	border: 1px solid #333;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 16px;
+	margin-bottom: 20px;
+	transition: border-color 0.3s;
+}
+
+.bmi-form input:focus {
+	border-color: var(--gold-main);
+	outline: none;
+}
+
+.bmi-btn {
+	width: 100%;
+	margin-top: 10px;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	color: #000000;
+}
+
+.bmi-result {
+	margin-top: 25px;
+	padding: 25px;
+	background: #0a0a0a;
+	border-radius: 6px;
+	border-left: 3px solid var(--gold-main);
+	text-align: center;
+}
+
+.bmi-result h3 {
+	color: var(--gold-main);
+	font-weight: 700;
+	font-size: 28px;
+	margin-bottom: 5px;
+}
+
+.bmi-result p {
+	color: #aaa;
+	font-size: 16px;
+	margin: 0;
+}
+
+.bmi-chart {
+	background: #151515;
+	padding: 40px;
+	border-radius: 8px;
+	border: 1px solid #222;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.bmi-chart h4 {
+	color: #fff;
+	font-weight: 600;
+	margin-bottom: 25px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.bmi-chart table {
+	width: 100%;
+}
+
+.bmi-chart table tr {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.bmi-chart table tr:last-child {
+	border-bottom: none;
+}
+
+.bmi-chart table td {
+	padding: 12px 0;
+	color: #a0a0a0;
+	font-size: 14px;
+}
+
+.bmi-chart table td:first-child {
+	color: #fff;
+	font-weight: 500;
+}
+
+.bmi-chart table td:last-child {
+	text-align: right;
+	color: var(--gold-main);
+	font-weight: 600;
+}
+
+/*---------------------
   Footer
 -----------------------*/
 
@@ -1359,7 +1492,8 @@ ol {
 	background: #000000;
 	padding-top: 60px;
 	padding-bottom: 0;
-	border-top: 3px solid #f1a923;
+	border-top: 3px solid var(--gold-main);
+	border-image: var(--gold-gradient) 1;
 	position: relative;
 }
 
@@ -1400,8 +1534,8 @@ ol {
 }
 
 .fs-about .fa-social a:hover {
-	color: #f1a923;
-	border-color: #f1a923;
+	color: var(--gold-main);
+	border-color: var(--gold-main);
 	box-shadow: 0 0 12px rgba(241, 169, 35, 0.3);
 	transform: translateY(-2px);
 }
@@ -1481,7 +1615,7 @@ ol {
 
 .copyright-text a,
 .copyright-text i {
-	color: #f1a923;
+	color: var(--gold-main);
 }
 
 /* Footer Map Embed */
@@ -1507,7 +1641,7 @@ ol {
 
 .footer-section .gt-text i {
 	background: transparent;
-	color: #f1a923;
+	color: var(--gold-main);
 	width: auto;
 	height: auto;
 	line-height: normal;
@@ -1550,12 +1684,12 @@ ol {
 	position: absolute;
 	left: 0;
 	top: 0;
-	color: #f1a923;
+	color: var(--gold-main);
 	transition: all 0.3s;
 }
 
 .footer-links li a:hover {
-	color: #f1a923;
+	color: var(--gold-main);
 	padding-left: 20px;
 }
 
@@ -1592,7 +1726,7 @@ ol {
 }
 
 .footer-hours ul li span {
-	color: #f1a923;
+	color: var(--gold-main);
 	font-weight: 500;
 	min-width: 90px;
 	display: inline-block;
@@ -1619,7 +1753,7 @@ ol {
 
 .canvas-instagram-link i {
 	font-size: 18px;
-	color: #f1a923;
+	color: var(--gold-main);
 }
 
 .canvas-instagram-link span {
@@ -1630,7 +1764,7 @@ ol {
 
 .canvas-instagram-link:hover,
 .canvas-instagram-link:hover span {
-	color: #f1a923 !important;
+	color: var(--gold-main) !important;
 }
 
 /* ----------------------------------- Other Pages Styles ----------------------------------- */
@@ -1666,14 +1800,14 @@ ol {
 	right: -14px;
 	top: 6px;
 	font-family: "FontAwesome";
-	content: "";
+	content: "ï„…";
 	font-size: 13px;
 	font-weight: 400;
 }
 
 .breadcrumb-text .bt-option span {
 	font-size: 18px;
-	color: #f1a923;
+	color: var(--gold-main);
 	font-weight: 700;
 }
 
@@ -1698,7 +1832,7 @@ ol {
 	display: inline-block;
 	height: 70px;
 	width: 70px;
-	background: #f1a923;
+	background: var(--gold-main);
 	border-radius: 50%;
 	line-height: 70px;
 	text-align: center;
@@ -1846,7 +1980,7 @@ ol {
 }
 
 .ss-text:hover a {
-	color: #f1a923;
+	color: var(--gold-main);
 }
 
 .ss-text:hover:after {
@@ -2032,7 +2166,7 @@ ol {
 .class-timetable table thead tr th {
 	font-size: 14px;
 	color: #ffffff;
-	background: #f1a923;
+	background: var(--gold-main);
 	border-right: 1px solid #363636;
 	padding: 15px 0;
 	font-weight: 400;
@@ -2045,7 +2179,7 @@ ol {
 
 .class-timetable table tbody tr td.class-time {
 	font-size: 12px;
-	color: #f1a923;
+	color: var(--gold-main);
 	background: #000000;
 	border: 1px solid #363636;
 }
@@ -2061,7 +2195,7 @@ ol {
 }
 
 .class-timetable table tbody tr td.hover-bg:hover {
-	background: #f1a923;
+	background: var(--gold-main);
 }
 
 .class-timetable table tbody tr td.blank-td {
@@ -2220,7 +2354,7 @@ ol {
 }
 
 .sidebar-option .so-categories ul li:hover a {
-	color: #f1a923;
+	color: var(--gold-main);
 }
 
 .sidebar-option .so-categories ul li:hover a span {
@@ -2457,7 +2591,7 @@ ol {
 	width: 100%;
 	border: none;
 	padding: 15px 0;
-	background: #f1a923;
+	background: var(--gold-main);
 }
 
 /*---------------------
@@ -2957,7 +3091,7 @@ ol {
 	width: 100%;
 	border: none;
 	padding: 14px 0 12px;
-	background: #f1a923;
+	background: var(--gold-main);
 }
 
 /*---------------------
@@ -2980,7 +3114,7 @@ ol {
 
 .contact-widget .cw-text i {
 	font-size: 30px;
-	color: #f1a923;
+	color: var(--gold-main);
 	display: inline-block;
 	height: 65px;
 	width: 65px;
@@ -3095,7 +3229,7 @@ ol {
 	color: #ffffffb3;
 	height: 46px;
 	width: 100%;
-	background: #f1a923;
+	background: var(--gold-main);
 	border: none;
 	padding-left: 20px;
 }
@@ -3151,7 +3285,7 @@ ol {
 }
 
 .text-404 a i {
-	color: #f1a923;
+	color: var(--gold-main);
 	margin-right: 5px;
 }
 
@@ -3383,7 +3517,7 @@ ol {
 	}
 
 	.offcanvas-menu-wrapper .canvas-social a:hover {
-		color: #f1a923;
+		color: var(--gold-main);
 	}
 
 	.offcanvas-menu-wrapper .canvas-social a:last-child {
@@ -3423,13 +3557,13 @@ ol {
 	.offcanvas-menu-wrapper .slicknav_nav .slicknav_row:hover {
 		border-radius: 0;
 		background: transparent;
-		color: #f1a923;
+		color: var(--gold-main);
 	}
 
 	.offcanvas-menu-wrapper .slicknav_nav a:hover {
 		border-radius: 0;
 		background: transparent;
-		color: #f1a923;
+		color: var(--gold-main);
 	}
 
 	.nav-menu {
@@ -3636,7 +3770,7 @@ ol {
 	}
 
 	.offcanvas-menu-wrapper .canvas-social a:hover {
-		color: #f1a923;
+		color: var(--gold-main);
 	}
 
 	.offcanvas-menu-wrapper .canvas-social a:last-child {
@@ -3676,17 +3810,17 @@ ol {
 	.offcanvas-menu-wrapper .slicknav_nav .slicknav_row:hover {
 		border-radius: 0;
 		background: transparent;
-		color: #f1a923;
+		color: var(--gold-main);
 	}
 
 	.offcanvas-menu-wrapper .slicknav_nav .slicknav_row:hover a {
-		color: #f1a923;
+		color: var(--gold-main);
 	}
 
 	.offcanvas-menu-wrapper .slicknav_nav a:hover {
 		border-radius: 0;
 		background: transparent;
-		color: #f1a923;
+		color: var(--gold-main);
 	}
 
 	.nav-menu {
@@ -3888,9 +4022,9 @@ ol {
 .schedule-mobile-carousel .owl-nav button {
 	height: 50px;
 	width: 50px;
-	background: #f1a923;
-	color: #f1a923;
-	border: 1px solid #f1a923;
+	background: var(--gold-main);
+	color: var(--gold-main);
+	border: 1px solid var(--gold-main);
 	border-radius: 50%;
 	margin: 0 10px;
 	font-size: 24px;
@@ -3901,7 +4035,7 @@ ol {
 }
 
 .schedule-mobile-carousel .owl-nav button:hover {
-	background: #f1a923;
+	background: var(--gold-main);
 	color: #111111;
 }
 
@@ -3929,14 +4063,14 @@ ol {
 }
 
 .schedule-card:hover {
-	border-color: #f1a923;
+	border-color: var(--gold-main);
 	transform: translateY(-5px);
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .sc-time {
 	font-size: 14px;
-	color: #f1a923;
+	color: var(--gold-main);
 	font-weight: 600;
 	margin-bottom: 15px;
 	display: block;
@@ -3966,7 +4100,7 @@ ol {
 	font-weight: 600;
 	text-transform: uppercase;
 	color: #111;
-	background: #f1a923;
+	background: var(--gold-main);
 	/* Default Gold */
 	border-radius: 2px;
 	margin-top: auto;
@@ -4003,17 +4137,17 @@ ol {
 }
 
 .schedule-card[data-tsmeta="workout"] .sc-tag {
-	background: #f1a923;
+	background: var(--gold-main);
 	/* Gold */
 	color: #111;
 }
 
 .schedule-card[data-tsmeta="workout"] .sc-time {
-	color: #f1a923;
+	color: var(--gold-main);
 }
 
 .schedule-card[data-tsmeta="workout"]:hover {
-	border-color: #f1a923;
+	border-color: var(--gold-main);
 }
 
 /* --------- Footer Mobile Responsive --------- */
